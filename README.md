@@ -15,6 +15,8 @@ Este repositorio contiene el software completo de una aplicación que consta de 
 ## Repositorios
 
 - [Repositorio de la Aplicación de Control de Venta](https://github.com/IrvingCM123/Sistema_Venta_QR.git)
+- [Repositorio de la Aplicación de lectura de códigos QR](*Pendiente)
+- [Repositorio de la Api RestFul](*Pendiente)
 
 ## Instrucciones de Uso
 
