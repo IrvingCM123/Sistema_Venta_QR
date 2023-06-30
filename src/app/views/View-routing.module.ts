@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { RegistroComponent } from './registro/registro.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { PerfilComponent } from './perfil';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'CrearCuenta', pathMatch: 'full' },
-  { path: 'CrearCuenta', component: RegistroComponent },
   { path: 'IniciarSesion', component: IniciarSesionComponent},
+  { path: 'CrearCuenta', component: RegistroComponent},
+  { path: 'Perfil', component: PerfilComponent},
+  { path: 'Empleados', component: EmpleadosComponent}
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

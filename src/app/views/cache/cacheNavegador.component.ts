@@ -1,39 +1,37 @@
-import { Inject, Injectable } from '@angular/core';
+import { Inject, Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: "root",
 })
 export class CacheComponent {
+    constructor() {}
 
-  constructor() { }
+    ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  getItem_ByID(id: string): any {
-    return localStorage.getItem(id);
-  }
-
-  setItem_ByID(id: string, item: any): void {
-    localStorage.setItem(id, item);
-  }
-
-  deleteItem_ByID(id: string): void {
-    localStorage.removeItem(id);
-  }
-
-  dropAllItems() {
-    if (caches && caches.keys) {
-      caches.keys().then(function (keys) {
-        keys.forEach(function (key) {
-          caches.delete(key);
-        })
-      })
+    getItem_ByID(id: string): any {
+        return localStorage.getItem(id);
     }
 
-    localStorage.clear();
+    setItem_ByID(id: string, item: any): void {
+        localStorage.setItem(id, item);
+    }
 
-    sessionStorage.clear();
-  }
+    deleteItem_ByID(id: string): void {
+        localStorage.removeItem(id);
+    }
 
+    dropAllItems() {
+        if (caches && caches.keys) {
+            caches.keys().then(function (keys) {
+                keys.forEach(function (key) {
+                    caches.delete(key);
+                });
+            });
+        }
+
+        localStorage.clear();
+
+        sessionStorage.clear();
+    }
 }
+
