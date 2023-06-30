@@ -7,16 +7,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PerfilComponent } from './views';
-import { HistorialventaComponent } from './views';
-import { VentaComponent } from './views';
-import { MenuNavegacionComponent } from './views';
+import { PerfilComponent } from './views/perfil/perfil.component';
+import { HistorialventaComponent } from './views/historialventa/historialventa.component';
+import { VentaComponent } from './views/venta/venta.component';
+import { MenuNavegacionComponent } from './views/menu-navegacion/menu-navegacion.component';
 
 import { RegistroComponent } from './views/registro/registro.component';
 
 import { IniciarSesion_Adapter } from './config/Connection/IniciarSesion/IniciarSesion.adapter';
 import { IniciarSesion_Port } from 'src/app/config/Interface/IniciarSesion/IniciarSesion.port';
 import { IniciarSesionComponent } from './views/iniciar-sesion/iniciar-sesion.component';
+import { PersonalComponent } from './views/personal/personal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { IniciarSesionComponent } from './views/iniciar-sesion/iniciar-sesion.co
     HistorialventaComponent,
     VentaComponent,
     MenuNavegacionComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,
