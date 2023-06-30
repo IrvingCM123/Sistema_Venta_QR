@@ -23,6 +23,8 @@ export class EmpleadosComponent implements OnInit {
             Direccion: "Oriente 39A",
             Correo_Electronico: "Irving.CondeM@Gmail.com",
             imagen: "https://pm1.narvii.com/7342/f3dbcca9d5bb37ec8678ce94ef435edce34852cfr1-985-720v2_hq.jpg",
+            Rango: "Empleado",
+            Sucursal: "Orizaba, 2514",
             Experiencia: [
                 { Valor: 45, Habilidad: "Diseño" },
                 {Valor: 14, Habilidad: "Corte y Confección"},
