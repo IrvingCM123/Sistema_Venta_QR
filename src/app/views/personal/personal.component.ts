@@ -12,4 +12,8 @@ export class PersonalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  empleado = [
+    {Nombre: "Irving Rafael", Rango: "Empleado", Imagen: "URL", "Sucursal": 12331 }
+  ]
+
 }
