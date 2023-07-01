@@ -10,7 +10,7 @@
                     animation-delay: 0.2s;
                     animation-name: fadeInUp;
                 ">
-                <h3>Lista sobre el personal <span> disponible en el area </span></h3>
+                <h3>Personal <span> disponible en el área </span></h3>
                 <p>
                     Selecciona una tarjeta para acceder a la información del empleado
                 </p>
@@ -19,27 +19,25 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row static-section">
 
-        <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="
+        <div class="col-12 col-sm-6 col-lg-3" *ngFor="let empleado of empleados">
+
+            <div class="carta_personal wow fadeInUp" (click)="MostrarEmpleado( empleado.Numero_Personal )" data-wow-delay="0.2s" style="
                     visibility: visible;
                     animation-delay: 0.2s;
                     animation-name: fadeInUp;
+                    cursor: pointer;
                 ">
 
-                <div class="advisor_thumb">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
-                    
-                    <div class="social-info">
-                        <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a
-                            href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
+                <div class="carta_miniatura">
+                    <img src={{empleado.Imagen}} alt="" />
                 </div>
-                
-                <div class="single_advisor_details_info">
-                    <h6>Samantha Sarah</h6>
-                    <p class="designation">Founder &amp; CEO</p>
+
+                <div class="carta_personal-informacion">
+                    <h6> Nombre: {{empleado.Nombre}} </h6>
+                    <p class="designation"> Numero_Personal: {{empleado.Numero_Personal}} </p>
+                    <p class="designation"> Sucursal: {{empleado.Sucursal}} </p>
                 </div>
             </div>
         </div>
