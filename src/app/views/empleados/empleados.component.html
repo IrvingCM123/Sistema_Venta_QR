@@ -1,113 +1,115 @@
-<div class="container rounded bg-white mt-5 mb-5" style="margin-top: 0">
-    <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="150px" height="150px" src="{{ empleados[0].imagen }}" />
-                <span class="font-weight-bold">{{ empleados[0].Nombre }}</span>
-                <span class="text-black-50">{{ empleados[0].Correo_Electronico }}
-                </span>
-                <span> </span>
-            </div>
-        </div>
-
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right"> Información del empleado </h4>
-                </div>
-
-                <div class="row mt-2">
-                    <div class="col-md-6">
-                        <label class="labels"> Nombre(s) </label><input type="text" class="form-control"
-                            placeholder="{{ empleados[0].Nombre }}" value="" disabled />
-                    </div>
-                    <div class="col-md-6">
-                        <label class="labels"> Apellidos </label><input type="text" class="form-control" value=""
-                            placeholder="{{ empleados[0].Apellidos }}" disabled />
-                    </div>
-                </div>
-
-                <div class="row mt-2">
-                    <div class="col-md-6">
-                        <label class="labels"> Edad </label>
-                        <input type="text" class="form-control" placeholder={{empleados[0].Edad}} value="" disabled/>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="labels"> Número personal </label>
-                        <input type="text" class="form-control" placeholder="2721492728" value="" disabled/>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                        <label class="labels"> Estado de residencia </label><input type="text" class="form-control"
-                            placeholder= {{empleados[0].Estado}}  value="" disabled/>
-                    </div>
-
-                    <div class="col-md-12">
-                        <label class="labels"> Ciudad de residencia </label><input type="text" class="form-control"
-                            placeholder= {{empleados[0].Ciudad}} value="" disabled/>
-                    </div>
-
-                    <div class="col-md-12">
-                        <label class="labels"> Código Postal </label><input type="text" class="form-control"
-                            placeholder= {{empleados[0].Codigo_Postal}} value="" disabled/>
-                    </div>
-
-                    <div class="col-md-12">
-                        <label class="labels"> Dirección de vivienda </label><input type="text" class="form-control"
-                            placeholder= {{empleados[0].Direccion}} value="" disabled/>
-                    </div>
-
-                    <div class="col-md-12">
-                        <label class="labels"> Estado Civil </label><input type="text" class="form-control"
-                            placeholder={{empleados[0].Estado_Civil}} value="" disabled/>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <label class="labels"> Rango </label><input type="text" class="form-control"
-                            placeholder= {{empleados[0].Rango}} value="" disabled/>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label class="labels"> Sucursal Trabajo </label><input type="text" class="form-control" value=""
-                            placeholder= {{empleados[0].Sucursal}} disabled/>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience">
-                    <span class="border px-3 p-1 add-experience">
-                        <i class="fa fa-plus"></i>&nbsp;Experience
+<body>
+    <div class="container rounded" style="margin-top: 0; padding-top: 0;">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" height="150px" src="{{ empleados[0].imagen }}" />
+                    <span class="font-weight-bold">{{ empleados[0].Nombre }}</span>
+                    <span class="text-black-50">{{ empleados[0].Correo_Electronico }}
                     </span>
+                    <span> </span>
                 </div>
-
-                <br />
-
-                <div *ngFor="let experiencia of empleados[0].Experiencia">
-
+            </div>
+    
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h4 class="text-right"> Información del empleado </h4>
+                    </div>
+    
                     <div class="row mt-2">
                         <div class="col-md-6">
-                            <div role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                                style="--value: {{experiencia.Valor}} ">
-                            </div>
+                            <label class="labels"> Nombre(s) </label><input type="text" class="form-control"
+                                placeholder="{{ empleados[0].Nombre }}" value="" disabled />
                         </div>
-
                         <div class="col-md-6">
-                            <p class="Habilidad_Text">
-                                Porcentaje de habilidad en:  {{ experiencia.Habilidad }}
-                            </p>
+                            <label class="labels"> Apellidos </label><input type="text" class="form-control" value=""
+                                placeholder="{{ empleados[0].Apellidos }}" disabled />
                         </div>
                     </div>
-
-                    <br>
+    
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label class="labels"> Edad </label>
+                            <input type="text" class="form-control" placeholder={{empleados[0].Edad}} value="" disabled/>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="labels"> Número personal </label>
+                            <input type="text" class="form-control" placeholder="2721492728" value="" disabled/>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <label class="labels"> Estado de residencia </label><input type="text" class="form-control"
+                                placeholder= {{empleados[0].Estado}}  value="" disabled/>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <label class="labels"> Ciudad de residencia </label><input type="text" class="form-control"
+                                placeholder= {{empleados[0].Ciudad}} value="" disabled/>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <label class="labels"> Código Postal </label><input type="text" class="form-control"
+                                placeholder= {{empleados[0].Codigo_Postal}} value="" disabled/>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <label class="labels"> Dirección de vivienda </label><input type="text" class="form-control"
+                                placeholder= {{empleados[0].Direccion}} value="" disabled/>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <label class="labels"> Estado Civil </label><input type="text" class="form-control"
+                                placeholder={{empleados[0].Estado_Civil}} value="" disabled/>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label class="labels"> Rango </label><input type="text" class="form-control"
+                                placeholder= {{empleados[0].Rango}} value="" disabled/>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <label class="labels"> Sucursal Trabajo </label><input type="text" class="form-control" value=""
+                                placeholder= {{empleados[0].Sucursal}} disabled/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience">
+                        <span class="border px-3 p-1 add-experience">
+                            <i class="fa fa-plus"></i>&nbsp;Experience
+                        </span>
+                    </div>
+    
+                    <br />
+    
+                    <div *ngFor="let experiencia of empleados[0].Experiencia">
+    
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <div role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                                    style="--value: {{experiencia.Valor}} ">
+                                </div>
+                            </div>
+    
+                            <div class="col-md-6">
+                                <p class="Habilidad_Text">
+                                    Porcentaje de habilidad en:  {{ experiencia.Habilidad }}
+                                </p>
+                            </div>
+                        </div>
+    
+                        <br>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>

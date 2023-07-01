@@ -1,0 +1,45 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-lg-6">
+
+            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="
+                    visibility: visible;
+                    animation-delay: 0.2s;
+                    animation-name: fadeInUp;
+                ">
+                <h3>Personal <span> disponible en el área </span></h3>
+                <p>
+                    Selecciona una tarjeta para acceder a la información del empleado
+                </p>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row static-section">
+
+        <div class="col-12 col-sm-6 col-lg-3" *ngFor="let empleado of empleados">
+
+            <div class="carta_personal wow fadeInUp" (click)="MostrarEmpleado( empleado.Numero_Personal )" data-wow-delay="0.2s" style="
+                    visibility: visible;
+                    animation-delay: 0.2s;
+                    animation-name: fadeInUp;
+                    cursor: pointer;
+                ">
+
+                <div class="carta_miniatura">
+                    <img src={{empleado.Imagen}} alt="" />
+                </div>
+
+                <div class="carta_personal-informacion">
+                    <h6> Nombre: {{empleado.Nombre}} </h6>
+                    <p class="designation"> Numero_Personal: {{empleado.Numero_Personal}} </p>
+                    <p class="designation"> Sucursal: {{empleado.Sucursal}} </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
