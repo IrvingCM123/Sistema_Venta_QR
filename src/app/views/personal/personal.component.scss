@@ -106,3 +106,12 @@ body {
 .carta_personal:focus .carta_personal-informacion p {
     color: #ffffff;
 }
+
+.static-section {
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    height: 100vh;  
+    overflow-y: scroll;
+  }
+  
