@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { CacheEmpleados } from "../cache/cacheEmpleados.service";
+import { Router } from '@angular/router';
 
 @Component({
     selector: "app-personal",
@@ -6,7 +8,10 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./personal.component.scss"],
 })
 export class PersonalComponent implements OnInit {
-    constructor() {}
+    constructor(
+        private cache_empleado: CacheEmpleados,
+        private router: Router
+    ) {}
 
     ngOnInit(): void {}
 
@@ -70,7 +75,7 @@ export class PersonalComponent implements OnInit {
     ];
 
     MostrarEmpleado(Numero_Personal: string | number) {
-        console.log(Numero_Personal);
-        window.location.href = 'Sistema/Empleados'
+        this.cache_empleado.Empleado_Seleccionado(Numero_Personal);
+        this.router.navigate(['/Sistema/Empleados'])
     }
 }
