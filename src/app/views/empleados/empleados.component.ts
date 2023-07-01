@@ -1,14 +1,17 @@
 import { Component, OnInit } from "@angular/core";
-
+import { CacheEmpleados } from "../cache/cacheEmpleados.service";
 @Component({
     selector: "app-empleados",
     templateUrl: "./empleados.component.html",
     styleUrls: ["./empleados.component.scss"],
 })
 export class EmpleadosComponent implements OnInit {
-    constructor() {} 
+    constructor(private cache_empleados: CacheEmpleados) {}
 
-    ngOnInit(): void {}
+    async ngOnInit() {
+        let Numero_Personal = this.cache_empleados.valor_Observable;
+        console.log(Numero_Personal)
+    }
 
     empleados = [
         {
@@ -27,7 +30,7 @@ export class EmpleadosComponent implements OnInit {
             Sucursal: "Orizaba, 2514",
             Experiencia: [
                 { Valor: 45, Habilidad: "Diseño" },
-                {Valor: 14, Habilidad: "Corte y Confección"},
+                { Valor: 14, Habilidad: "Corte y Confección" },
             ],
         },
         {
@@ -39,7 +42,7 @@ export class EmpleadosComponent implements OnInit {
             imagen: "https://pm1.narvii.com/7342/f3dbcca9d5bb37ec8678ce94ef435edce34852cfr1-985-720v2_hq.jpg",
             Experiencia: [
                 { Valor: 45, Habilidad: "Diseño" },
-                {Valor: 14, Habilidad: "Corte y Confección"},
+                { Valor: 14, Habilidad: "Corte y Confección" },
             ],
         },
     ];
